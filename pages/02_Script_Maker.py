@@ -21,12 +21,12 @@ from langchain_community.document_transformers import BeautifulSoupTransformer
 
 
 strict_llm = ChatOpenAI(
-    model="gpt-3.5-turbo-1106",
+    model="gpt-4-1106-preview",
     temperature=0,
 ) #요약 같은 정확한 업무를 해야 할 때
 
 flexible_llm = ChatOpenAI(
-    model="gpt-3.5-turbo-1106",
+    model="gpt-4-1106-preview",
     temperature=0.2,
 ) #요약 같은 정확한 업무를 해야 할 때
 
