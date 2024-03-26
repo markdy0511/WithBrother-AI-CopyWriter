@@ -110,6 +110,11 @@ st.markdown(
     Use Script Assistant for your magazine work.
             
     Start by writing the URL of the website or/with what you want to write on the sidebar.
+
+    When you choose NAVER or YOUTUBE, you are going to be take summary of the source.
+
+    You cannot change order of outline, yet.
+    
 """
 )
 
@@ -128,7 +133,7 @@ with st.sidebar: #원하는 소스를 만드는 곳
 
     if choice == "NAVER NEWS":
         url = st.text_input(
-        "Write down a URL",
+        "Write down a URL and Press Enter",
         placeholder="https://n.news.naver.com/article/~~~",
         )
         if url:
@@ -144,7 +149,7 @@ with st.sidebar: #원하는 소스를 만드는 곳
 
     elif choice == "YOUTUBE VEDIO":
         url = st.text_input(
-        "Write down a URL",
+        "Write down a URL and Press Enter",
         placeholder="https://www.youtube.com/~~~",
         )
         if url:
@@ -163,7 +168,6 @@ with st.sidebar: #원하는 소스를 만드는 곳
                     writing_material["magazine_context"] = DESCRIPTION
                     writing_material["num_magazine_outline"] = NUM_OUTLINE
     else:
-        st.write("no source Done")
         source = "Nothing"
         TITLE, DESCRIPTION, NUM_OUTLINE, submitted = source_input_form()
         writing_material = {
