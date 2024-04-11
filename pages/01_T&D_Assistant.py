@@ -8,6 +8,7 @@ from langchain.callbacks import StreamingStdOutCallbackHandler
 import streamlit as st
 from langchain.retrievers import WikipediaRetriever
 from langchain.schema import BaseOutputParser, output_parser
+import insert_logo
 
 class JsonOutputParser(BaseOutputParser):
     def parse(self, text):
@@ -21,6 +22,9 @@ st.set_page_config(
     page_title="T&D Assistant",
     page_icon="🤹",
 )
+
+insert_logo.add_logo("withbrother_logo.png")
+
 
 llm = ChatOpenAI(
     temperature=0.1,
