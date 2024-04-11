@@ -1,9 +1,14 @@
 import streamlit as st
+import insert_logo
+
 
 st.set_page_config(
     page_title="WithBrother-AI Home",
     page_icon = "🤖"
 )
+
+insert_logo.add_logo("withbrother_logo.png")
+
 
 st.title("WithBrother-AI Home")
 
