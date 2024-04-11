@@ -18,6 +18,7 @@ from langchain.document_loaders import TextLoader
 from langchain.schema import StrOutputParser
 from langchain.document_loaders import AsyncChromiumLoader
 from langchain_community.document_transformers import BeautifulSoupTransformer
+import insert_logo
 
 
 strict_llm = ChatOpenAI(
@@ -101,6 +102,7 @@ st.set_page_config(
     page_title="Script Maker",
     page_icon="📜",
 )
+insert_logo.add_logo("withbrother_logo.png")
 
 
 st.markdown(
